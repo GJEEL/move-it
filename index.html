@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1, h2, h3, h4, h5, h6 {margin: auto;}
+
+    body {
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+        background-image: url(https://64.media.tumblr.com/f65edafba97f5d080461cfb1a03967b0/f764ab10286436ef-3a/s1280x1920/5edec669e31b913f0d03db540e070a56a434f263.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form input, form textarea {
+        margin: 0.25em 0.5em;
+    }
+    
+    #box {
+        border: medium solid #000;
+        box-sizing: border-box;
+        background: #aaa;
+        width: 50%;
+        height: 50%;
+        overflow-y: auto;
+        transition: 10s;
+    }
+    
+    #box:hover, #box:focus, #box:active {
+        height: 0;
+    }
+    
+    
+</style>
+<body>
+<div id="box">
+    <h1>Very Important Form Below</h1>
+    
+    <p>We love your information. Put it in.</p>
+    
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" rows="4">
+        </textarea>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
