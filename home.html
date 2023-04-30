@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move It</title>
+<link href="./style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+	h1 {
+		animation-name: wiggle;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+</style>
+<body>
+<main>
+	<h1>MOVE IT</h1>
+
+	<marquee behavior="alternate"><a href="./poop.html">MOVE IT</a></marquee>
+	<marquee behavior="alternate" direction="right"><a href="./">MOVE IT</a></marquee>
+	<marquee behavior="alternate"><a href="./">MOVE IT</a></marquee>
+	<marquee behavior="alternate" direction="right"><a href="./">MOVE IT</a></marquee>
+	
+	<marquee behavior="alternate" direction="up">
+		<marquee behavior="alternate">
+			<input type="checkbox" name="lost" id="lost">
+			<label for="lost" id="lost-label"></label>
+		</marquee>
+	</marquee>
+</main>
+</body>
+</html>

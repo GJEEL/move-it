@@ -1,0 +1,117 @@
+h1, h2, h3, h4, h5, h6 {
+	width: max-content;
+	margin: 1em auto;
+	text-align: center;
+	}
+	
+a {color: blue;}
+a:visited {color: purple;}
+
+body {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-content: center;
+	box-sizing: border-box;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+main {
+	box-sizing: border-box;
+	background: white;
+	margin: auto;
+	width: 20%;
+	height: max-content;
+	min-width: 280px;
+}
+
+form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+form input, form textarea {
+        margin: 0.25em 0.5em;
+    }
+    
+marquee > marquee {
+	position: relative;
+}
+
+.terms {
+	margin: 1em;
+	padding: 1em;
+	border: thin solid gray;
+	height: 50%;
+	overflow-y: auto;
+	background: white;
+	text-align: left;
+	font-family: monospace;
+}
+	
+#cont {
+		display: block;
+		visibility: collapse;
+		background-color: yellow;
+		border-radius: 25px;
+		margin: auto;
+		padding: 0.6em 1em;
+		font-size: 2.5em;
+	}
+	
+#cont a {
+	text-decoration: none;
+	color: black;
+}
+	
+#agree {
+		margin: 0 auto 1em;
+	}
+	
+#agree:checked ~ #cont {
+	visibility: visible;
+}
+	
+#box {
+	margin: auto;
+	padding: 0 1em;
+	border: medium solid #000;
+	box-sizing: border-box;
+	background: #eee;
+	width: 50%;
+	min-width: 300px;
+	height: 69%;
+	overflow-y: auto;
+	transition: 6s;
+	transition-timing-function: linear;
+}
+    
+#box:hover, #box:focus, #box:active {
+	height: 0;
+}
+	
+#lost {
+	visibility: hidden;
+}
+	
+#lost-label::after {
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+	content: "Lost?"
+}
+	
+#lost:checked ~ #lost-label::after {
+	color: purple;
+	content: "Good luck."
+}
+
+@keyframes wiggle {
+	0% {transform: rotate(0);}
+	25% {transform: rotate(2deg);}
+	50% {transform: rotate(0);}
+	75% {transform: rotate(-2deg);}
+	100% {transform: rotate(0);}
+}

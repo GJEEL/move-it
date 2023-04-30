@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move It</title>
+<link href="./style.css" rel="stylesheet" type="text/css" media="all">
+</head>
 <style>
-    h1, h2, h3, h4, h5, h6 {margin: auto;}
-
     body {
-        margin: 0;
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        justify-content: center;
-        align-content: center;
         background-image: url(https://64.media.tumblr.com/f65edafba97f5d080461cfb1a03967b0/f764ab10286436ef-3a/s1280x1920/5edec669e31b913f0d03db540e070a56a434f263.png);
-        background-position: top center;
+        background-position: center;
         background-repeat: no-repeat;
-        
     }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    form input, form textarea {
-        margin: 0.25em 0.5em;
-    }
-    
-    #box {
-        border: medium solid #000;
-        box-sizing: border-box;
-        background: #aaa;
-        width: 50%;
-        height: 50%;
-        overflow-y: auto;
-        transition: 10s;
-    }
-    
-    #box:hover, #box:focus, #box:active {
-        height: 0;
-    }
-    
-    
 </style>
 <body>
-<div id="box">
-    <h1>Very Important Form Below</h1>
-    
-    <p>We love your information. Put it in.</p>
-    
-    <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-        <label for="email">E-mail</label>
-        <input type="text" id="email" name="email">
-        
-        <label for="comments">Comments</label>
-        <textarea id="comments" name="comments" rows="4">
-        </textarea>
-        <input type="submit">
-    </form>
-</div>
+	<main id="box">
+		<h1>Before You Can Move It...</h1>
+		
+		<p>
+			This website has:
+			<ul>
+				<li>CSS animations that may cause eye strain.
+				<li>Conterintuitive design choices.
+				<li>Annoying features.
+			</ul>
+		
+			Please be cautious approaching it.
+		</p>
+		
+		<p>To continue, please read and accept the Terms and Conditions.</p>
+		
+		<div class="terms">
+		<h2>TERMS AND CONDITIONS</h2>
+		
+			<p>
+				This is an experimental art website by a student. This means that it is held together by the hopes and dreams of someone with limited worldly experience.
+			</p>
+			
+			<p>
+				Any resemblance to real life people, stories, or events is a coincidence. This is not a biographical work. It might not even be a parody.
+			</p>
+			
+			<p>
+				This website does not record any information because it is a static website with no plug-ins, add-ons, or embeds.
+				However, this website's host has traffic analysis. Maybe more than that. Do not assume you are free from data collection.
+			</p>
+			
+			</p>
+				This website relies on your device's connection to the internet and your device's ability to download its files.
+				By continuing, you are willingly subjecting yourself to this website, its host, your internet service provider, and the light of your screen.
+				Whatever happens will happen, and you will not hold Move It liable for anything. At all. Ever.
+			</p>
+			
+			<p>
+				
+			</p>
+			
+			<p>
+				Move It is not provided under any license.
+			</p>
+		</div>
+		
+		<input type="checkbox" name="agree" id="agree">
+		<label for="agree">I agree to these terms.</label>
+		
+		<button id="cont"><a href="./home.html">Start Moving</a></button>
+	</main>
 </body>
 </html>
