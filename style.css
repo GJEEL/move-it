@@ -138,3 +138,15 @@ a:hover, a:active, a:focus {
 	0% {transform: rotate(0);}
 	100% {transform: rotate(360deg);}
 }
+
+@keyframes pulse {
+	0% {transform: scale(1);}
+	50% {transform: scale(0.95);}
+	100% {transform: scale(1);}
+}
+
+@keyframes bounce {
+	0% {transform: rotate(1deg) translate(5px);}
+	50% {transform: rotate(-1deg) translate(-5px);}
+	100% {transform: rotate(1deg) translate(5px);}
+}

@@ -16,18 +16,26 @@
 <body>
 <script>
 (function setAnim() {
-	var randomInt = Math.floor(Math.random() * 2);
-	var h1 = getElementsByTagName("h1");
+	var randomInt = Math.floor(Math.random() * 4);
+	var dStyle = document.querySelector('style');
+
+	console.log(randomInt);
 
 	switch(randomInt) {
 		case 0:
-			h1.style.setProperty('animation-name', "spin");
+			dStyle.innerHTML = "h1 {animation-name: wobble; animation-duration: 5s; animation-iteration-count: infinite;};";
 			break;
 		case 1:
-			h1.style.setProperty('animation-name', "spin")
+			dStyle.innerHTML = "h1 {animation-name: spin; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear;};";
+			break;
+		case 2:
+			dStyle.innerHTML = "h1 {animation-name: pulse; animation-duration: 5s; animation-iteration-count: infinite;};";
+			break;
+		case 3:
+			dStyle.innerHTML = "h1 {animation-name: bounce; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: ease-in-out;};";
 			break;
 	}
-})
+})();
 </script>
 <main style="text-align: center;">
 	<h1>MOVE IT</h1>
