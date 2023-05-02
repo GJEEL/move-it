@@ -73,12 +73,20 @@ a:hover, a:active, a:focus {
 	
 #cont {
 	display: block;
+	width: max-content;
+	text-align: center;
 	visibility: collapse;
-	background-color: yellow;
-	border-radius: 25px;
+	background-color: #aaa;
+	border: 1px solid black;
+	border-radius: 5px;
 	margin: auto;
 	padding: 0.6em 1em;
 	font-size: 2.5em;
+	color: white;
+	text-decoration: none;
+	box-shadow: 2px 2px #000a;
+	font-family: sans-serif;
+	font-variant-caps: small-caps;
 }
 	
 #cont a {
