@@ -1,3 +1,5 @@
+html {scroll-behavior: smooth;}
+
 h1, h2, h3, h4, h5, h6 {
 	width: max-content;
 	margin: 1em auto;
@@ -8,11 +10,11 @@ a {color: blue;}
 a:visited {color: purple;}
 
 body {
+	box-sizing: border-box;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-content: center;
-	box-sizing: border-box;
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
@@ -22,22 +24,40 @@ main {
 	box-sizing: border-box;
 	background: white;
 	margin: auto;
+	padding: 1em;
 	width: 20%;
 	height: max-content;
 	min-width: 280px;
+	overflow-y: auto;
 }
 
 form {
-        display: flex;
-        flex-direction: column;
-    }
+	display: flex;
+	flex-direction: column;
+}
     
 form input, form textarea {
-        margin: 0.25em 0.5em;
-    }
-    
+	display: inline-block;
+	margin: 0.25em 0.5em;
+}
+
+form input:hover, form input:focus, form input:active {
+	animation-name: spin;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
 marquee > marquee {
 	position: relative;
+}
+
+a {display: inline-block;}
+
+a:hover, a:active, a:focus {
+	animation-name: wobble;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
 }
 
 .terms {
@@ -52,14 +72,14 @@ marquee > marquee {
 }
 	
 #cont {
-		display: block;
-		visibility: collapse;
-		background-color: yellow;
-		border-radius: 25px;
-		margin: auto;
-		padding: 0.6em 1em;
-		font-size: 2.5em;
-	}
+	display: block;
+	visibility: collapse;
+	background-color: yellow;
+	border-radius: 25px;
+	margin: auto;
+	padding: 0.6em 1em;
+	font-size: 2.5em;
+}
 	
 #cont a {
 	text-decoration: none;
@@ -108,10 +128,13 @@ marquee > marquee {
 	content: "Good luck."
 }
 
-@keyframes wiggle {
+@keyframes wobble {
+	0% {transform: rotate(2deg);}
+	50% {transform: rotate(-2deg);}
+	100% {transform: rotate(2deg);}
+}
+
+@keyframes spin {
 	0% {transform: rotate(0);}
-	25% {transform: rotate(2deg);}
-	50% {transform: rotate(0);}
-	75% {transform: rotate(-2deg);}
-	100% {transform: rotate(0);}
+	100% {transform: rotate(360deg);}
 }
