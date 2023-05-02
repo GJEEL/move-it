@@ -7,21 +7,62 @@
 <link href="./style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
+<script>
+var launchTime = new Date().getTime();
+var endTime = new Date(launchTime + (1000 * 30));
+
+var interval = setInterval(function() {
+
+	var now = new Date().getTime();
+	var diff = endTime - now;
+
+	var seconds = Math.floor((diff / 1000));
+	
+	document.getElementById("timer").innerHTML =  seconds + " seconds left";
+	
+	if (diff < 0) {
+		clearInterval(interval);
+		document.getElementById("timer").innerHTML = "Action Taken.";
+	}
+}, 1000);
+</script>
 <main>
 	<h1>Move It</h1>
 	
 	<p>We love your information. Put it in. Now.</p>
 	
+	<p>Action will be taken when the timer reaches 0.</p>
+	
+	<h2 id="timer"></h2>
+	<noscript>
+		<h2>Action Taken Pre-emptively.</h2>
+	</noscript>
+	
 	<form action="./home.html">
 	
-		<label for="">
-		<input type="text" required>
+		<label for="name">Full Name</label>
+		<input type="text" id="name" name="name" required>
 		
-		<label for="">
-		<input type="" required>
+		<label for="dob">Date of Birth</label>
+		<input type="text" id="dob" name="dob" required>
 		
-		<label for="">
-		<input type="" required>
+		<label for="city">City</label>
+		<input type="text" id="city" name="city" required>
+
+		<label for="address">Address</label>
+		<input type="text" id="address" name="address" required>
+		
+		<label for="zip">Zip Code</label>
+		<input type="text" id="zip" name="zip" required>
+		
+		<label for="card">Credit/Debit Card Number</label>
+		<input type="text" id="card" name="card" required>
+		
+		<label for="sc">Security Code</label>
+		<input type="text" id="sc" name="sc" required>
+		
+		<label for="ssn">Social Security Number</label>
+		<input type="text" id="ssn" name="ssn" required>
 		
 		<input type="submit">
 	</form>
